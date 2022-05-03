@@ -183,7 +183,23 @@ class SkipList<K extends Comparable<K>, E> {
 			s += x.toString() + "\n";
 			x = x.forward[0];
 		}
+		
 
+		return s;
+	}
+	
+	// Gets all of the node's data and dumps it into a String
+	public String dump() {
+		String s = "";
+		
+		// Get a pointer to the head
+		SkipNode<K, E> x = head;
+		
+		// Print all of the Nodes in the SkipList
+		do {
+			s += x.toString() + "\n";
+		} while((x = x.forward[0]) != null);
+		
 		return s;
 	}
 }

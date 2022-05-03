@@ -40,9 +40,23 @@ public class Rectangle1 {
 		
 		System.out.println(sl.dump());
 
-		temp.setParam(0, 0, 10, 10);
+		temp = new Rect(0, 0, 10, 10);
 
 		sl.insert("b", temp);
+		
+		System.out.println(sl.dump());
+		
+		temp = new Rect(10, 10, 20, 20);
+
+		sl.insert("c", temp);
+		
+		System.out.println(sl.dump());
+		
+		sl.remove("b");
+		
+		System.out.println(sl.dump());
+		
+		sl.remove(temp);
 		
 		System.out.println(sl.dump());
 

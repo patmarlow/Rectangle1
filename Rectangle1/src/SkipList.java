@@ -40,8 +40,16 @@ class SkipList<K extends Comparable<K>, E> {
 	// input
 	public K find(E elem) {
 		SkipNode<K, E> x = head; // pointer to header node
-		while ((x.forward[0] != null) && (!x.forward[0].element().equals(elem)))
+
+		while (x.forward[0] != null) {
+			if (x.forward[0].element().equals(elem))
+				break;
+			
 			x = x.forward[0];
+		}
+		
+		// Go to the next node
+		x = x.forward[0];
 
 		// If x is null, then the elem was not found
 		if ((x != null) && (x.element().equals(elem)))
@@ -177,29 +185,28 @@ class SkipList<K extends Comparable<K>, E> {
 			while ((x.forward[i] != null) && (x.forward[i].key().compareTo(key) < 0)) // go forward
 				x = x.forward[i]; // Go one last step
 		x = x.forward[0]; // Move to actual record, if it exists
-		
+
 		// Print all nodes with the key
 		while (x != null && x.key().compareTo(key) == 0) {
 			s += x.toString() + "\n";
 			x = x.forward[0];
 		}
-		
 
 		return s;
 	}
-	
+
 	// Gets all of the node's data and dumps it into a String
 	public String dump() {
 		String s = "";
-		
+
 		// Get a pointer to the head
 		SkipNode<K, E> x = head;
-		
+
 		// Print all of the Nodes in the SkipList
 		do {
 			s += x.toString() + "\n";
-		} while((x = x.forward[0]) != null);
-		
+		} while ((x = x.forward[0]) != null);
+
 		return s;
 	}
 }

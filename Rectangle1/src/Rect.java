@@ -54,7 +54,7 @@ public class Rect {
 	// Overrides the toString operator used in KVPair
 	@Override
 	public String toString() {
-		String s = null;
+		String s = "";
 		s += x + ", ";
 		s += y + ", ";
 		s += width + ", ";

@@ -25,12 +25,27 @@
 // during the discussion. I have violated neither the spirit nor
 // letter of this restriction.
 
-
 public class Rectangle1 {
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
+	public static void main(String[] args) {
 
-    }
+		// Test insertion and dumps
+		SkipList<String, Rect> sl = new SkipList<String, Rect>();
+
+		Rect temp = new Rect(0, 0, 5, 5);
+
+		System.out.println(sl.dump());
+
+		sl.insert("a", temp);
+		
+		System.out.println(sl.dump());
+
+		temp.setParam(0, 0, 10, 10);
+
+		sl.insert("b", temp);
+		
+		System.out.println(sl.dump());
+
+	}
 
 }

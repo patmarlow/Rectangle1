@@ -27,6 +27,14 @@ public class Rect {
 		height = rectangle.getHeight();
 	}
 
+	public void setParam(int x1, int y1, int w, int h) {
+		// Set the parameters of the rectangle
+		x = x1;
+		y = y1;
+		width = w;
+		height = h;
+	}
+
 	public int getX() {
 		return x;
 	}

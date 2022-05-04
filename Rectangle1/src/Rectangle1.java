@@ -61,5 +61,35 @@ public class Rectangle1 {
 		System.out.println(sl.dump());
 
 	}
+	
+	private void parseandeval(String filename) {
+		
+	}
+	
+	private boolean insert(String key, Rect r) {
+		return false;
+	}
+	
+	private boolean remove(String key) {
+		return true;
+	}
+	
+	private boolean remove(Rect r) {
+		return false;
+		
+	}
+	
+	private void regionsearch(Rect r) {
+		
+	}
+	
+	private boolean intersections() {
+		return false;
+		
+	}
+	
+	public String dump{
+		return null;
+	}
 
 }

@@ -1,0 +1,14 @@
+insert a 0 0 2 2
+insert b 0 0 5 7
+insert Awd 9 125 94 22
+insert bruh 609 213 5 12
+insert a 25 12 56 212
+insert b 14 52 125 64
+dump
+remove 25 12 56 212
+remove Awd
+ remove b
+remove a
+remove 14 52 125 64
+
+dump

@@ -1,0 +1,37 @@
+Output:
+Rectangle inserted: (a, 0, 0, 2, 2)
+Rectangle inserted: (b, 0, 0, 5, 7)
+Rectangle inserted: (Awd, 9, 125, 94, 22)
+Rectangle inserted: (bruh, 609, 213, 5, 12)
+Rectangle inserted: (a, 25, 12, 56, 212)
+Rectangle inserted: (b, 14, 52, 125, 64)
+Rectangle removed: (b, 14, 52, 125, 64)
+Rectangle removed: (Awd, 9, 125, 94, 22)
+Rectangle removed: (b, 14, 52, 125, 64)
+Rectangle removed: (a, 25, 12, 56, 212)
+Rectangle not removed: (14, 52, 125, 64)
+SkipList dump:
+Node has depth 7, Value (null)
+Node has depth 7, Value (a, 0, 0, 2, 2)
+Node has depth 1, Value (b, 0, 0, 5, 7)
+Node has depth 3, Value (bruh, 609, 213, 5, 12)
+SkipList size is: 2
+
+Expected:
+Rectangle inserted: (a, 0, 0, 2, 2)
+Rectangle inserted: (b, 0, 0, 5, 7)
+Rectangle inserted: (Awd, 9, 125, 94, 22)
+Rectangle inserted: (bruh, 609, 213, 5, 12)
+Rectangle inserted: (a, 25, 12, 56, 212)
+Rectangle inserted: (b, 14, 52, 125, 64)
+Rectangle removed: (a, 25, 12, 56, 212) *
+Rectangle removed: (Awd, 9, 125, 94, 22)
+Rectangle removed: (b, 14, 52, 125, 64)
+Rectangle removed: (a, 0, 0, 2, 2)
+Rectangle not removed: (14, 52, 125, 64)
+SkipList dump:
+Node has depth 7, Value (null)
+*
+Node has depth 1, Value (b, 0, 0, 5, 7)
+Node has depth 3, Value (bruh, 609, 213, 5, 12)
+SkipList size is: 2
